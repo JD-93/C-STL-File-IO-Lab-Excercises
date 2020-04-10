@@ -15,8 +15,8 @@ int main() {
 	list <int> lst ;
 	int count = 0 ;
 	for (int i=0 ; i<100 ; i++ ){
-		int temp =11;
-//		temp = rand() ;
+		int temp ;
+		temp = rand() ;
 		lst.push_back(temp) ;
 		count++ ;
 	}
