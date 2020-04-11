@@ -22,14 +22,14 @@ int main() {
 	while ((choice = menulist()) != 0 ){
 		switch (choice) {
 			case 1:
-				ofile.open("student",ios::binary|ios::app) ;
+				ofile.open("student.txt",ios::binary|ios::app) ;
 				s.accept() ;
 				ofile.write((char *)&s,sizeof(student)) ;
 				ofile.close() ;
 				break;
 
 			case 2 :
-					ifile.open("student",ios::binary) ;
+					ifile.open("student.txt",ios::binary) ;
 					while(!ifile.eof()){
 					ifile.read((char *)&s,sizeof(student)) ;
 					s.display() ;
@@ -42,7 +42,7 @@ int main() {
 	/* when i am tring to print last roll no file it get printed twice */ // ??????????
 
 			case 3 :
-				ifile.open("student",ios::binary) ;
+				ifile.open("student.txt",ios::binary) ;
 				int roll ;
 				cout<<"Enter roll no to be searched : " ;
 				cin>>roll ;
@@ -55,7 +55,7 @@ int main() {
 				break ;
 
 			case 4 :
-				ifile.open("student",ios::binary) ;
+				ifile.open("student.txt",ios::binary) ;
 				cout<<"Enter roll no to be searched : " ;
 				int roll1 ;
 				cin>>roll1 ;
